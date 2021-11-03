@@ -1,6 +1,6 @@
 import { extendTheme } from '@chakra-ui/react';
 
-export const theme = extendTheme({
+export default extendTheme({
   fonts: {
     heading: 'Forte',
   },

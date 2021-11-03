@@ -5,6 +5,7 @@ import { AnimatedChevronDown } from '../components/animated-chevron-down';
 import { Header } from '../components/header';
 import { Part } from '../components/part';
 import { StaticImage } from 'gatsby-plugin-image';
+import { Link } from '../components/link';
 
 // markup
 function IndexPage() {
@@ -35,18 +36,18 @@ function IndexPage() {
         <Part id="accueil" color="white">
           <Header/>
           <div>
-            <Heading
+            <Text
               as="h1"
-              size="2xl"
+              fontSize="4xl"
               textAlign="center"
-              pt={20}
+              pt={10}
               fontFamily="Forte"
             >
               {data?.site?.siteMetadata?.title}
-            </Heading>
+            </Text>
           </div>
-          <Center pt={20} pb={10}>
-            <Box w="75%" h="75%" textAlign="center">
+          <Center pt={5} pb={5}>
+            <Box w="15rem" textAlign="center">
               <StaticImage
                 src='../images/logo.jpg'
                 alt='Logo principal'
@@ -56,25 +57,61 @@ function IndexPage() {
           <Center>
             <Text
               fontSize="lg"
-              pt={10}
+              pt={5}
             >
                             Soins de Bien-être － Soins esthétiques
             </Text>
           </Center>
-          <AnimatedChevronDown pt="3rem"/>
+          <AnimatedChevronDown pt={5} />
         </Part>
-        <Part id="nos-soins" color="blue">2.</Part>
-        <Part id="tarifs" color="brown">3.</Part>
+        <Part id="nos-soins" color="blue">
+          <Text
+            as="h2"
+            fontSize="5xl"
+            textAlign="center"
+            pt={20}
+            fontFamily="Forte"
+          >
+                        Nos soins
+          </Text>
+        </Part>
+        <Part id="tarifs" color="brown">
+          <Text
+            as="h2"
+            fontSize="5xl"
+            textAlign="center"
+            pt={20}
+            fontFamily="Forte"
+          >
+                        Tarifs
+          </Text>
+          <Heading
+            as="h2"
+            size="3xl"
+            textAlign="center"
+            pt={20}
+            fontFamily="Forte"
+          >
+                        Tarifs
+          </Heading>
+        </Part>
         <Part id="contact">
           <Heading
             as="h2"
             size="2xl"
             textAlign="center"
             pt={20}
-            fontFamily="Forte"
           >
                         Contact
           </Heading>
+          <Center>
+            <Link
+              to="https://v01dsOciTy.com"
+              target="_blank"
+            >
+                            Made with ❤️ by Guillaume Quittet
+            </Link>
+          </Center>
         </Part>
       </Box>
     </>

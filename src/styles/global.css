@@ -2,3 +2,8 @@
     font-family: 'Forte';
     src: url('../fonts/forte.ttf') format('truetype');
 }
+
+@font-face {
+    font-family: 'Bulletto Killa';
+    src: url('../fonts/Bulletto_Killa.ttf') format('truetype');
+}

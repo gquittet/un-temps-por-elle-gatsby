@@ -4,7 +4,7 @@ import { Link } from './link.jsx';
 
 export function ResponsiveMenu({ data }) {
   return <>
-    { data.map(({ name, link }) => (
+    {data.map(({ name, link }) => (
       <Link
         key={link}
         to={link}
@@ -30,6 +30,6 @@ export function ResponsiveMenu({ data }) {
         </MenuList>
       </Menu>
     </Box>
-      */ }
+      */}
   </>;
 }

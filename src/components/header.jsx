@@ -13,13 +13,13 @@ const menuData = [
 export function Header() {
   return (
     <header
-      style={{ paddingTop: '2rem' }}
+      style={{ paddingTop: '3rem' }}
     >
       <Flex
         alignItems="center"
         justifyContent="center"
       >
-        <ResponsiveMenu data={menuData} />
+        <ResponsiveMenu data={menuData}/>
       </Flex>
     </header>
   );

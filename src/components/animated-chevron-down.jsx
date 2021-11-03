@@ -10,15 +10,15 @@ const MotionDiv = chakra(motion.div, {
   },
 });
 
-export function AnimatedChevronDown() {
+export function AnimatedChevronDown({ pt }) {
   return <MotionDiv
     key="chevron-down"
     style={{ display: 'flex' }}
-    h="60vh"
+    pt={pt}
     justifyContent="center"
     alignItems="end"
     initial={{ y: 0 }}
-    animate={{ y: 30, opacity: [0, 1, 0] }}
+    animate={{ y: 10, opacity: [0, 1, 0] }}
     transition={{
       duration: 2,
       repeat: Infinity,
@@ -28,7 +28,7 @@ export function AnimatedChevronDown() {
     <Link
       to="/#nos-soins"
     >
-      <ChevronDownIcon cursor="pointer" />
+      <ChevronDownIcon cursor="pointer"/>
     </Link>
   </MotionDiv>;
 }

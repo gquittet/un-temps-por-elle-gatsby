@@ -8,6 +8,7 @@ export function Part({ children, color, id }) {
     id={id}
     as="article"
     h="100vh"
+    minH="55rem"
     bg={color}
     style={{ scrollSnapAlign: 'center' }}
   >

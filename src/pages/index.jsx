@@ -11,14 +11,14 @@ import { Link } from '../components/link';
 function IndexPage() {
   // noinspection GraphQLUnresolvedReference
   const data = useStaticQuery(graphql`
-        query {
-            site {
-                siteMetadata {
-                    title
-                }
-            }
+    query {
+      site {
+        siteMetadata {
+          title
         }
-    `);
+      }
+    }
+  `);
 
   return (
     <>
@@ -32,7 +32,6 @@ function IndexPage() {
           overflowY: 'scroll',
         }}
       >
-
         <Part id="accueil" color="white">
           <Header/>
           <div>
@@ -59,10 +58,10 @@ function IndexPage() {
               fontSize="lg"
               pt={5}
             >
-                            Soins de Bien-être － Soins esthétiques
+              Soins de Bien-être － Soins esthétiques
             </Text>
           </Center>
-          <AnimatedChevronDown pt={5} />
+          <AnimatedChevronDown pt={5}/>
         </Part>
         <Part id="nos-soins" color="blue">
           <Text
@@ -72,7 +71,7 @@ function IndexPage() {
             pt={10}
             fontFamily="Forte"
           >
-                        Nos soins
+            Nos soins
           </Text>
         </Part>
         <Part id="tarifs" color="brown">
@@ -83,7 +82,7 @@ function IndexPage() {
             pt={10}
             fontFamily="Forte"
           >
-                        Tarifs
+            Tarifs
           </Text>
         </Part>
         <Part id="contact">
@@ -101,8 +100,8 @@ function IndexPage() {
               to="https://v01dsOciTy.com"
               target="_blank"
             >
-                            Made with ❤️ by Guillaume Quittet
-            </Link>
+              Made with ❤️ by Guillaume Quittet
+            </a>
           </Center>
         </Part>
       </Box>

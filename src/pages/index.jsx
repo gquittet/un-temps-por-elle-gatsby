@@ -67,9 +67,9 @@ function IndexPage() {
         <Part id="nos-soins" color="blue">
           <Text
             as="h2"
-            fontSize="5xl"
+            fontSize="4xl"
             textAlign="center"
-            pt={20}
+            pt={10}
             fontFamily="Forte"
           >
                         Nos soins
@@ -78,32 +78,24 @@ function IndexPage() {
         <Part id="tarifs" color="brown">
           <Text
             as="h2"
-            fontSize="5xl"
+            fontSize="4xl"
             textAlign="center"
-            pt={20}
+            pt={10}
             fontFamily="Forte"
           >
                         Tarifs
           </Text>
-          <Heading
-            as="h2"
-            size="3xl"
-            textAlign="center"
-            pt={20}
-            fontFamily="Forte"
-          >
-                        Tarifs
-          </Heading>
         </Part>
         <Part id="contact">
-          <Heading
+          <Text
             as="h2"
-            size="2xl"
+            fontSize="4xl"
             textAlign="center"
-            pt={20}
+            pt={10}
+            fontFamily="Forte"
           >
-                        Contact
-          </Heading>
+            Contact
+          </Text>
           <Center>
             <Link
               to="https://v01dsOciTy.com"

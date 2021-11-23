@@ -96,9 +96,10 @@ function IndexPage() {
             Contact
           </Text>
           <Center>
-            <Link
-              to="https://v01dsOciTy.com"
+            <a
+              href="https://v01dsOciTy.com"
               target="_blank"
+              rel="noreferrer"
             >
               Made with ❤️ by Guillaume Quittet
             </a>

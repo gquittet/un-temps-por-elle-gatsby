@@ -29,7 +29,7 @@ export function Part({ children, color, id }) {
       <motion.div
         initial={{ y: -10, opacity: 0 }}
         animate={animationControl}
-        transition={{ duration: 1, delay: index * 0.5 }}
+        transition={{ duration: 1, delay: (index + 1) * 0.5 }}
       >
         {child}
       </motion.div>

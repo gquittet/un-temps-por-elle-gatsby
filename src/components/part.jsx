@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box } from '@chakra-ui/react';
+import { Container } from '@chakra-ui/react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
@@ -7,7 +7,7 @@ import { useInView } from 'react-intersection-observer';
 export function Part({ children, color, id }) {
   const animationControl = useAnimation();
 
-  const { ref, inView } = useInView();
+  const { ref: animationTrigger, inView } = useInView();
 
   if (inView) {
     animationControl.start({
@@ -16,14 +16,14 @@ export function Part({ children, color, id }) {
     });
   }
 
-  return <Box
+  return <Container
     id={id}
     as="article"
     h="100vh"
     minH="35rem"
     bg={color}
     style={{ scrollSnapAlign: 'center' }}
-    ref={ref}
+    ref={animationTrigger}
   >
     {React.Children.map(children, (child, index) => (
       <motion.div
@@ -34,5 +34,5 @@ export function Part({ children, color, id }) {
         {child}
       </motion.div>
     ))}
-  </Box>;
+  </Container>;
 }

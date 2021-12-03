@@ -1,11 +1,14 @@
-import { Box, Center, Heading, Text } from '@chakra-ui/react';
+import { Box, Button, Center, Icon, Text } from '@chakra-ui/react';
 import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
 import { AnimatedChevronDown } from '../components/animated-chevron-down';
 import { Header } from '../components/header';
+import { ContactButton } from '../components/contact-button';
 import { Part } from '../components/part';
 import { StaticImage } from 'gatsby-plugin-image';
-import { Link } from '../components/link';
+import { FaFacebook } from '@react-icons/all-files/fa/FaFacebook';
+import { FaPhoneAlt } from '@react-icons/all-files/fa/FaPhoneAlt';
+import { FaWaze } from '@react-icons/all-files/fa/FaWaze';
 
 // markup
 function IndexPage() {
@@ -33,7 +36,7 @@ function IndexPage() {
         }}
       >
         <Part id="accueil" color="white">
-          <Header/>
+          <Header />
           <div>
             <Text
               as="h1"
@@ -63,7 +66,9 @@ function IndexPage() {
           </Center>
           <AnimatedChevronDown pt={5}/>
         </Part>
+
         <Part id="nos-soins" color="blue">
+          <Header />
           <Text
             as="h2"
             fontSize="4xl"
@@ -74,7 +79,9 @@ function IndexPage() {
             Nos soins
           </Text>
         </Part>
+
         <Part id="tarifs" color="brown">
+          <Header />
           <Text
             as="h2"
             fontSize="4xl"
@@ -85,7 +92,9 @@ function IndexPage() {
             Tarifs
           </Text>
         </Part>
-        <Part id="contact">
+
+        <Part id="contact" h="full">
+          <Header />
           <Text
             as="h2"
             fontSize="4xl"
@@ -95,15 +104,38 @@ function IndexPage() {
           >
             Contact
           </Text>
-          <Center>
-            <a
-              href="https://v01dsOciTy.com"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Made with ❤️ by Guillaume Quittet
-            </a>
-          </Center>
+          <ContactButton
+            pt={5}
+            icon={<FaPhoneAlt />}
+            colorScheme="blackAlpha"
+            text="0478/12.66.59"
+            uri="tel:+32478126659"
+          />
+          <ContactButton
+            pt={5}
+            icon={<FaFacebook />}
+            colorScheme="facebook"
+            text="Ou via Facebook"
+            uri="https://www.facebook.com/francoisegaillez.untempsporelle"
+          />
+          <ContactButton
+            pt={5}
+            icon={<FaWaze />}
+            colorScheme="blue"
+            text="Venez nous rendre visite"
+            uri="http://waze.com/ul?ll=50.408968804122246,4.166313420679421"
+          />
+          <Box pos="relative" h="36vh">
+            <Center pos="absolute" bottom="0" left="0" right="0">
+              <a
+                href="https://v01dsOciTy.com"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Made with ❤️ by Guillaume Quittet
+              </a>
+            </Center>
+          </Box>
         </Part>
       </Box>
     </>

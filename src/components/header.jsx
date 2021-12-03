@@ -1,4 +1,4 @@
-import { Flex } from '@chakra-ui/react';
+import { Center, Box } from '@chakra-ui/react';
 import React from 'react';
 import { ResponsiveMenu } from './responsive-menu';
 
@@ -10,17 +10,16 @@ const menuData = [
 ];
 
 
-export function Header() {
+export function Header({ ...props }) {
   return (
-    <header
-      style={{ paddingTop: '3rem' }}
-    >
-      <Flex
-        alignItems="center"
-        justifyContent="center"
+    <Center paddingTop="3rem" bg="white">
+      <Box
+        as="header"
+        top="3rem"
+        {...props}
       >
         <ResponsiveMenu data={menuData}/>
-      </Flex>
-    </header>
+      </Box>
+    </Center>
   );
 }
